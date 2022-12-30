@@ -1,0 +1,30 @@
+
+CREATE TABLE "public"."pie_roots" (
+    "id" bigint NOT NULL,
+    "root" "text",
+    "category" "text",
+    "gloss_english" "text",
+    "gloss_german" "text",
+    "basic_aspect" "text",
+    "sanskrit_root" "text",
+    "skt_root_traditional" "text",
+    "skt_root_nagari" "text",
+    "whitney_root_gloss" "text",
+    "cognates" "text",
+    "nodes" "text",
+    "dervied_aspect" "text",
+    "verb_type" "text",
+    "semantics" "text",
+    "clade3" "text",
+    "pokorny_root" "text",
+    "pok" "text",
+    "liv" "text",
+    "nil" "text",
+    "source" "text",
+    "root_init" "text",
+    "root_search" "text",
+    "category_search" "text",
+    "created_at" timestamp with time zone DEFAULT "now"(),
+    "updated_at" timestamp with time zone DEFAULT "now"()
+);
+
