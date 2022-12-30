@@ -92,10 +92,10 @@
       <label for="username">Name</label>
       <input id="username" type="text" bind:value="{username}" />
     </div>
-    <div>
+    <!-- <div>
       <label for="website">Website</label>
       <input id="website" type="website" bind:value="{website}" />
-    </div>
+    </div> -->
   
     <div>
       <input type="submit" class="button block primary" value={loading ? 'Loading...' : 'Update'}
