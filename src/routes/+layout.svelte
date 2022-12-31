@@ -1,4 +1,7 @@
 <script lang="ts">
+  import "virtual:windi.css"
+  import { browser } from "$app/environment";
+  if (browser) import("virtual:windi-devtools")
     import { supabase } from '$lib/supabaseClient'
     import { invalidate } from '$app/navigation'
     import { onMount } from 'svelte'
