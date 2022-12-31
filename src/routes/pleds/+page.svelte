@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte'
     import { supabase } from '$lib/supabaseClient'
+    import Table from '$lib/table.svelte'
 
     export let data;
     let loading = false;
@@ -38,16 +39,14 @@
         loading = false
       }
     }
+    let columns = [
+        [ 'ID',   'id', 'col-1' ], //, 'f', (x, y) => goto(x, y) ],
+        [ 'Root',      'root',    'col-1' ],
+        [ 'Category',    'category',  'col-1' ], //, 'html' ],
+        [ 'English Gloss',    'gloss_english',   'col-1' ],
+        [ 'German Gloss', 'gloss_german',    'col-1' ]
+    ]
 </script>
 
-{#each roots as x}
-    <div>
-        <h3>{x.id} {x.root}</h3>
-        <div>
-            <div>{x.category}</div>
-            <div>{x.gloss_english}</div>
-            <div>{x.gloss_german}</div>
-        </div>
-        <hr>
-    </div>
-{/each}
+<Table {columns} rows={roots} use_filter={true} key_column=id height="80" />
+
